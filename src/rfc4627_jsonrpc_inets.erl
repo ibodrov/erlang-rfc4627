@@ -91,11 +91,7 @@
 %% The path to httpd.hrl has changed in OTP R14A and newer. Our
 %% Makefile detects the change for us, and supplies a compile-time
 %% macro definition to allow us to adapt to the new path.
--ifdef(new_inets).
 -include_lib("inets/src/http_server/httpd.hrl").
--else.
--include_lib("inets/src/httpd.hrl").
--endif.
 
 -export([do/1, load/2]).
 
